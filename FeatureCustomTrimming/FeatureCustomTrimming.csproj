@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,14 +10,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!--<RuntimeHostConfigurationOption Include="My.Feature" Value="false" Trim="true" />-->
+    <RuntimeHostConfigurationOption Include="My.Feature" Value="false" Trim="true" />
   </ItemGroup>
   
 
   <Target Name="PrepareForMyILLink"
           BeforeTargets="PrepareForILLink">
     <ItemGroup>
-      <ManagedAssemblyToLink Condition="$([System.String]::Copy('%(ManagedAssemblyToLink.Filename)').Equals('MyTestApp'))">
+      <ManagedAssemblyToLink Condition="$([System.String]::Copy('%(ManagedAssemblyToLink.Filename)').Equals('FeaturePoweredLibrary'))">
         <IsTrimmable>true</IsTrimmable>
         <TrimMode>link</TrimMode>
       </ManagedAssemblyToLink>
