@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<linker>
+  <assembly fullname="FeaturePoweredLibrary">
+    <type fullname="FeaturePoweredLibrary.MySwitches">
+      <method signature="System.Boolean get_IsMyFeatureEnabled()" body="stub" value="false"
+              feature="My.Feature" featurevalue="false" />
+    </type>
+  </assembly>
+</linker>
